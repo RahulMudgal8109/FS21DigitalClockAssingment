@@ -75,10 +75,22 @@ window.onload = () => {
     }
     else {
         hours.innerText = hrs;
-
     }
 
-    minutes.innerText = mins;
-    seconds.innerText = secs;
+    if (mins < 9) {
+        minutes.innerText = "0" + mins;
+    }
+    else {
+        minutes.innerText = mins;
+    }
+
+    if (secs < 9) {
+        seconds.innerText = "0" + secs;
+    }
+    else {
+        seconds.innerText =secs;
+    }
+    
+    
     updateTime();
 }
